@@ -34,7 +34,7 @@ const Home = () => {
         </p>
 
         <div className=' social-icons flex space-x-4 mt-4 mb-12'>
-          <a className='flex justify-center items-center w-10 h-10 bg-transparent rounded-full border-2 border-green-400 text-green-400 transition-transform duration-300 ease-in-out hover:text-white hover:bg-black transform hover:scale-130 hover:-translate-y-1 hover:animate-spin' href="https://web.facebook.com/rahatmf1/">
+          <a className='flex justify-center items-center w-10 h-10 bg-transparent rounded-full border-2 border-green-400 text-green-400 transition-transform duration-300 ease-in-out hover:text-white hover:bg-black transform hover:scale-130 hover:-translate-y-1 hover:animate-spin' href="https://www.facebook.com/rahatfuad01/">
             <i className="fa-brands fa-facebook-f"></i>
           </a>
           {/* <a className='flex justify-center items-center w-10 h-10 bg-transparent rounded-full border-2 border-green-400 text-green-400 transition-transform duration-300 ease-in-out hover:text-white hover:bg-black transform hover:scale-130 hover:-translate-y-1' href="">
@@ -46,7 +46,7 @@ const Home = () => {
           {/* <a className='flex justify-center items-center w-10 h-10 bg-transparent rounded-full border-2 border-green-400 text-green-400 transition-transform duration-300 ease-in-out hover:text-white hover:bg-black transform hover:scale-130 hover:-translate-y-1' href="">
             <i className="fa-brands fa-whatsapp"></i>
           </a> */}
-          <a className='flex justify-center items-center w-10 h-10 bg-transparent rounded-full border-2 border-green-400 text-green-400 transition-transform duration-300 ease-in-out hover:text-white hover:bg-black transform hover:scale-130 hover:-translate-y-1 hover:animate-spin' href="https://www.instagram.com/rahat_mf/">
+          <a className='flex justify-center items-center w-10 h-10 bg-transparent rounded-full border-2 border-green-400 text-green-400 transition-transform duration-300 ease-in-out hover:text-white hover:bg-black transform hover:scale-130 hover:-translate-y-1 hover:animate-spin' href="https://www.instagram.com/fuad.rahat/">
             <i className="fa-brands fa-instagram"></i>
           </a>
           <a className='flex justify-center items-center w-10 h-10 bg-transparent rounded-full border-2 border-green-400 text-green-400 transition-transform duration-300 ease-in-out hover:text-white hover:bg-black transform hover:scale-130 hover:-translate-y-1 hover:animate-spin' href="https://github.com/fuad-rahat">

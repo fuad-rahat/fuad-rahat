@@ -53,11 +53,11 @@ const Contact = () => {
             <div className=' lg:flex  gap-10 justify-center items-center '>
                 <div className=' flex text-xl flex-col justify-start items-start gap-2'>
                 <p className='flex gap-2 justify-center items-center'><i className="fa-solid fa-location-dot"></i> Trishal,Mymensingh,Bangladesh</p>
-                <p className='flex gap-2 justify-center items-center'><i className="fa-solid fa-envelope"></i>rahatmf@gmail.com</p>
+                <p className='flex gap-2 justify-center items-center'><i className="fa-solid fa-envelope"></i>fuadrahat1@gmail.com</p>
                 <p className='flex gap-2 justify-center items-center'><i className="fa-solid fa-phone"></i>01754677999</p>
 
                 <div className='  social-icons flex space-x-4 mt-4 mb-12'>
-          <a className='flex justify-center items-center w-10 h-10 bg-transparent rounded-full border-2 border-green-400 text-green-400 transition-transform duration-300 ease-in-out hover:text-white hover:bg-black transform hover:scale-130 hover:-translate-y-1 hover:animate-spin' href="https://web.facebook.com/rahatmf1/">
+          <a className='flex justify-center items-center w-10 h-10 bg-transparent rounded-full border-2 border-green-400 text-green-400 transition-transform duration-300 ease-in-out hover:text-white hover:bg-black transform hover:scale-130 hover:-translate-y-1 hover:animate-spin' href="https://www.facebook.com/rahatfuad01/">
             <i className="fa-brands fa-facebook-f"></i>
           </a>
           {/* <a className='flex justify-center items-center w-10 h-10 bg-transparent rounded-full border-2 border-green-400 text-green-400 transition-transform duration-300 ease-in-out hover:text-white hover:bg-black transform hover:scale-130 hover:-translate-y-1' href="">
@@ -69,7 +69,7 @@ const Contact = () => {
           {/* <a className='flex justify-center items-center w-10 h-10 bg-transparent rounded-full border-2 border-green-400 text-green-400 transition-transform duration-300 ease-in-out hover:text-white hover:bg-black transform hover:scale-130 hover:-translate-y-1' href="">
             <i className="fa-brands fa-whatsapp"></i>
           </a> */}
-          <a className='flex justify-center items-center w-10 h-10 bg-transparent rounded-full border-2 border-green-400 text-green-400 transition-transform duration-300 ease-in-out hover:text-white hover:bg-black transform hover:scale-130 hover:-translate-y-1 hover:animate-spin' href="https://www.instagram.com/rahat_mf/">
+          <a className='flex justify-center items-center w-10 h-10 bg-transparent rounded-full border-2 border-green-400 text-green-400 transition-transform duration-300 ease-in-out hover:text-white hover:bg-black transform hover:scale-130 hover:-translate-y-1 hover:animate-spin' href="https://www.instagram.com/fuad.rahat/">
             <i className="fa-brands fa-instagram"></i>
             
           </a>
