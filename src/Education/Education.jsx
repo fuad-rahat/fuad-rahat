@@ -2,13 +2,13 @@ import React, { useEffect, useRef } from 'react';
 import { BiLogoCPlusPlus } from 'react-icons/bi';
 import { BsGithub } from 'react-icons/bs';
 import { CgFigma } from 'react-icons/cg';
-import { DiCss3, DiHtml5, DiJava, DiJavascript, DiMongodb, DiNodejs, DiReact } from 'react-icons/di';
-import { SiExpress, SiFirebase, SiTailwindcss } from 'react-icons/si';
+import { DiCss3, DiFirebase, DiHtml5, DiJava, DiJavascript, DiJavascript1, DiMongodb, DiNodejs, DiReact } from 'react-icons/di';
+import { SiExpress, SiFirebase, SiJavascript, SiTailwindcss } from 'react-icons/si';
 
 const Education = () => {
   const text = 'text-sm lg:text-2xl bg-red-400 text-white lg:px-5 rounded-tl-badge rounded-br-badge px-3 lg:p-2';
   const photo = 'flex hover:animate-spin hover:text-red-400 rounded-full justify-center items-center w-7 h-7 md:w-12 md:h-12 border-2 border-green-400 text-green-400';
-  const skills = ['Html', 'CSS', 'Tailwind', 'React', 'Node.js', 'Express', 'MongoDB', 'C', 'C++', 'Java', 'Javascript'];
+  const skills = ['Html', 'CSS', 'Tailwind', 'React', 'Node.js', 'Express', 'MongoDB', 'C', 'C++', 'Java', 'Javascript','Firebase','Github'];
 
   const elementsRef = useRef([]);
 
@@ -41,9 +41,9 @@ const Education = () => {
 
   return (
     <div className='max-w-[60rem] mx-auto px-5'>
-      <div className='max-w-[60rem] md:max-w-[50rem] mx-auto'>
+      <div className='max-w-[60rem] md:max-w-[60rem] mx-auto'>
         <p className='text-4xl text-center lg:text-7xl'> Skills</p>
-        <div className='grid max-w-[60rem] mx-auto lg:grid-cols-4 grid-flow-col grid-rows-6 lg:grid-rows-3 gap-10 lg:gap-6 my-10'>
+        <div className='grid max-w-[60rem] mx-auto lg:grid-cols-4 grid-flow-col grid-rows-7 lg:grid-rows-3 gap-10 lg:gap-6 my-10'>
           {skills.map((skill, index) => (
             <div
               key={index}
@@ -63,7 +63,7 @@ const Education = () => {
                     C: BiLogoCPlusPlus,
                     'C++': BiLogoCPlusPlus,
                     Java: DiJava,
-                    Javascript: DiJavascript,
+                    Javascript:DiJavascript1,
                     Figma: CgFigma,
                     Firebase: SiFirebase,
                     Github: BsGithub

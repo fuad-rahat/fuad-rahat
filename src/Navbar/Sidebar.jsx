@@ -55,7 +55,7 @@ export default function Sidebar({ children }) {
               <h4 className="font-semibold">Md. Muhtasim Fuad Rahat</h4>
               <span className="text-xs text-gray-600">rahatmf@gmail.com</span>
             </div>
-            <MoreVertical size={20} />
+           
           </div>
         </div>
       </nav>

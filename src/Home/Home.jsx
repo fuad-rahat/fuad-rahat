@@ -49,6 +49,9 @@ const Home = () => {
           <a className='flex justify-center items-center w-10 h-10 bg-transparent rounded-full border-2 border-green-400 text-green-400 transition-transform duration-300 ease-in-out hover:text-white hover:bg-black transform hover:scale-130 hover:-translate-y-1 hover:animate-spin' href="https://www.instagram.com/rahat_mf/">
             <i className="fa-brands fa-instagram"></i>
           </a>
+          <a className='flex justify-center items-center w-10 h-10 bg-transparent rounded-full border-2 border-green-400 text-green-400 transition-transform duration-300 ease-in-out hover:text-white hover:bg-black transform hover:scale-130 hover:-translate-y-1 hover:animate-spin' href="https://github.com/fuad-rahat">
+            <i className="fa-brands fa-github"></i>
+          </a>
         </div>
 
         <div className="navbar-end -mt-8 pb-3 ">
@@ -56,7 +59,7 @@ const Home = () => {
         </div>
       </div>
       <div className=''>
-      <div className='max-w-[45rem] mx-auto px-5'>
+      <div className='max-w-[58rem] mx-auto px-3'>
       <Education></Education>
       </div>
       <div className='max-w-[45rem] ml-10 mx-auto'>

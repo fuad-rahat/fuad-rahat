@@ -33,9 +33,11 @@ const Main = () => {
                     <CustomNavLink to='/projects' icon={<CgWebsite size={20} />} text="Projects" />
                     {/* <CustomNavLink to='/settings' icon={<FaPenClip size={20} />} text="Blog" /> */}
                     <CustomNavLink to='/contact' icon={<GrContact size={20} />} text="Contact" />
+                    <div className="tooltip tooltip-right" data-tip="Admin Only">
                     {
-                        user?.email ? <LogOutIcon className='ml-3 mt-2 cursor-pointer' onClick={logout} size={20}></LogOutIcon> :<LogInIcon className='ml-3 mt-2 cursor-pointer' onClick={googleHandler} size={20}></LogInIcon>
+                        user?.email ? <LogOutIcon className=' ml-3 mt-2 cursor-pointer' onClick={logout} size={20}></LogOutIcon> :<LogInIcon  className=' ml-3 mt-2 cursor-pointer' onClick={googleHandler} size={20}></LogInIcon>
                     }
+                    </div>
                 </Sidebar>
             </div>
             <div className=' overflow-x-hidden ml-[4rem] max-w-[50rem] lg:max-w-[90rem] mx-auto '> {/* Adjust margin to prevent content overlap */}
