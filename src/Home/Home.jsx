@@ -38,7 +38,7 @@ const Home = () => {
 
         {/* Right Column: Description, Call to Action, Social Links */}
         <div className="md:w-1/2 text-center md:text-left">
-          <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-8">
+          <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-2">
             Passionate about web development's endless creativity, I specialize in pushing boundaries and exploring digital innovation. With a solid foundation in software engineering, I aim to create impactful, user-centric solutions.
           </p>
 
