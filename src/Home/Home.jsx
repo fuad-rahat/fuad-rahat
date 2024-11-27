@@ -1,7 +1,6 @@
 import React from 'react';
 import './homecss.css';
 import { TypeAnimation } from 'react-type-animation';
-import '/Compulsories/My Portfolio/fuad-rahat/src/Home/homecss.css';
 import Education from '../Education/Education';
 import Projects from '../Projects/Projects';
 import Contact from '../Contact/Contact';
