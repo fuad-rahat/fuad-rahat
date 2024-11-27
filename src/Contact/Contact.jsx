@@ -2,9 +2,8 @@ import axios from 'axios';
 import { SnackbarProvider, useSnackbar } from 'notistack';
 import { useState } from 'react';
 
-
 const Contact = () => {
-    const { enqueueSnackbar } = useSnackbar(); // Use useSnackbar hook inside the component to show snackbars
+    const { enqueueSnackbar } = useSnackbar();
     const [message, setMessage] = useState('');
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -46,60 +45,63 @@ const Contact = () => {
     };
 
     return (
-        <div className='max-w-[30rem] px-5 my-20 md:max-w-[80rem] mx-auto'>
-            <div className='px-5 max-w-sm mx-auto md:h-[32rem] bg-blue-200 md:max-w-[60rem] border-2 border-sky-500 rounded-2xl md:mt-5'>
-                <p className='text-3xl my-4 lg:my-0 lg:text-6xl font-semibold text-center'>Contact ME</p>
-                <div className='lg:flex gap-10 justify-center items-center'>
-                    <div className='flex text-xl flex-col justify-start items-start gap-2'>
-                        <p className='flex gap-2 justify-center items-center'><i className="fa-solid fa-location-dot"></i> Trishal, Mymensingh, Bangladesh</p>
-                        <p className='flex gap-2 justify-center items-center'><i className="fa-solid fa-envelope"></i> fuadrahat01@gmail.com</p>
-                        <p className='flex gap-2 justify-center items-center'><i className="fa-solid fa-phone"></i> 01754677999</p>
+        <div className="max-w-[30rem] px-5 my-8 md:max-w-[80rem] mx-auto">
+            <div className="bg-blue-200 border-2 border-sky-500 rounded-2xl p-5 md:p-10">
+                <p className="text-3xl lg:text-4xl font-semibold text-center mb-6">Contact ME</p>
+                <div className="lg:flex lg:gap-10 lg:justify-center items-center">
+                    {/* Contact Info Section */}
+                    <div className="flex flex-col gap-3 mb-6 lg:mb-0 text-xl">
+                        <p className="flex gap-2 items-center"><i className="fa-solid fa-location-dot"></i> Trishal, Mymensingh, Bangladesh</p>
+                        <p className="flex gap-2 items-center"><i className="fa-solid fa-envelope"></i> fuadrahat01@gmail.com</p>
+                        <p className="flex gap-2 items-center"><i className="fa-solid fa-phone"></i> 01754677999</p>
 
-                        <div className='social-icons flex space-x-4 mt-4 mb-12'>
-                            <a className='flex justify-center items-center w-10 h-10 bg-transparent rounded-full border-2 border-sky-700 text-sky-700 transition-transform duration-300 ease-in-out hover:text-white hover:bg-black transform hover:scale-130 hover:-translate-y-1 hover:animate-spin' href="https://www.facebook.com/rahatfuad01/">
+                        {/* Social Media Icons */}
+                        <div className="flex space-x-4 mt-6 mb-12">
+                            <a className="w-10 h-10 flex justify-center items-center bg-transparent border-2 border-sky-700 text-sky-700 rounded-full transition-transform hover:text-white hover:bg-black transform hover:scale-125" href="https://www.facebook.com/rahatfuad01/">
                                 <i className="fa-brands fa-facebook-f"></i>
                             </a>
-                            <a className='flex justify-center items-center w-10 h-10 bg-transparent rounded-full border-2 border-sky-700 text-sky-700 transition-transform duration-300 ease-in-out hover:text-white hover:bg-black transform hover:scale-130 hover:-translate-y-1 hover:animate-spin' href="https://www.linkedin.com/in/fuadrahat/">
+                            <a className="w-10 h-10 flex justify-center items-center bg-transparent border-2 border-sky-700 text-sky-700 rounded-full transition-transform hover:text-white hover:bg-black transform hover:scale-125" href="https://www.linkedin.com/in/fuadrahat/">
                                 <i className="fa-brands fa-linkedin"></i>
                             </a>
-                            <a className='flex justify-center items-center w-10 h-10 bg-transparent rounded-full border-2 border-sky-700 text-sky-700 transition-transform duration-300 ease-in-out hover:text-white hover:bg-black transform hover:scale-130 hover:-translate-y-1 hover:animate-spin' href="https://www.instagram.com/fuad.rahat/">
+                            <a className="w-10 h-10 flex justify-center items-center bg-transparent border-2 border-sky-700 text-sky-700 rounded-full transition-transform hover:text-white hover:bg-black transform hover:scale-125" href="https://www.instagram.com/fuad.rahat/">
                                 <i className="fa-brands fa-instagram"></i>
                             </a>
-                            <a className='flex justify-center items-center w-10 h-10 bg-transparent rounded-full border-2 border-sky-700 text-sky-700 transition-transform duration-300 ease-in-out hover:text-white hover:bg-black transform hover:scale-130 hover:-translate-y-1 hover:animate-spin' href="https://github.com/fuad-rahat">
+                            <a className="w-10 h-10 flex justify-center items-center bg-transparent border-2 border-sky-700 text-sky-700 rounded-full transition-transform hover:text-white hover:bg-black transform hover:scale-125" href="https://github.com/fuad-rahat">
                                 <i className="fa-brands fa-github"></i>
                             </a>
                         </div>
                     </div>
-                    <div className='pb-2'>
-                        <form action="" onSubmit={contactHandler}>
-                            <div>
+
+                    {/* Contact Form */}
+                    <div className="w-full md:w-96">
+                        <form onSubmit={contactHandler}>
+                            <div className="space-y-4">
                                 <input
-                                    name='name'
+                                    name="name"
                                     type="text"
                                     placeholder="Write Your Name"
-                                    className="input input-bordered input-success w-full max-w-xl my-2"
+                                    className="input input-bordered input-success w-full"
                                     value={name}
                                     onChange={(e) => setName(e.target.value)}
                                 />
                                 <input
-                                    name='email'
+                                    name="email"
                                     type="email"
                                     placeholder="Write Your Email"
-                                    className="input my-2 input-bordered input-success w-full max-w-xl"
+                                    className="input input-bordered input-success w-full"
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
                                 />
                                 <textarea
-                                    name='message'
-                                    type="text"
-                                    className="textarea my-2 textarea-lg w-[15rem] md:w-[36rem] textarea-success"
+                                    name="message"
                                     placeholder="Write your message here"
+                                    className="textarea textarea-lg textarea-success w-full"
                                     value={message}
                                     onChange={(e) => setMessage(e.target.value)}
                                 />
                             </div>
-                            <div className='flex justify-center items-center'>
-                                <input type="submit" className='btn px-10 md:-ml-44 bg-sky-500 text-white' value="Send" />
+                            <div className="flex justify-center mt-6">
+                                <input type="submit" className="btn bg-sky-500 text-white px-10" value="Send" />
                             </div>
                         </form>
                     </div>
