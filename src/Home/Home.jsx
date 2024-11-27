@@ -13,7 +13,7 @@ const Home = () => {
       <section className="flex flex-col gap-20 md:flex-row justify-between items-center py-16 md:py-24 space-y-8 md:space-y-0">
 
         {/* Left Column: Name, Image, and Designation */}
-        <div className="md:w-1/2 text-center md:text-left">
+        <div className="md:w-1/2 mb-1 text-center md:text-left">
           <div className="flex justify-center md:justify-start mb-8">
             <img
               src="/formal.png"  // Ensure image path is correct
@@ -37,8 +37,8 @@ const Home = () => {
         </div>
 
         {/* Right Column: Description, Call to Action, Social Links */}
-        <div className="md:w-1/2 text-center md:text-left">
-          <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-2">
+        <div className="md:w-1/2  text-center md:text-left">
+          <p className="text-lg -mt-28 md:mt-0 sm:text-xl md:text-2xl text-gray-600 mb-7">
             Passionate about web development's endless creativity, I specialize in pushing boundaries and exploring digital innovation. With a solid foundation in software engineering, I aim to create impactful, user-centric solutions.
           </p>
 
