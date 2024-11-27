@@ -6,7 +6,7 @@ const CustomNavLink = ({ to, icon, text, alert }) => {
   return (
     <NavLink
       to={to}
-      className={({ isActive }) => isActive ? "bg-green-400 text-white" : ""}
+      className={({ isActive }) => isActive ? "bg-sky-700 text-white" : ""}
     >
       {({ isActive }) => (
         <SidebarItem icon={icon} text={text} active={isActive} alert={alert} />

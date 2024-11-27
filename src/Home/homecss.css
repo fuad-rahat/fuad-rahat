@@ -7,3 +7,38 @@ div p {
   font-weight: 700;
   font-style: normal;
 }
+
+.googlemia {
+  position: absolute;
+  opacity: 0; /* Start with the text hidden */
+}
+
+.googlemia:hover {
+  position: static;
+  color: #f75003ca; /* Darker color for hover */
+  transform: scale(1.05); /* Slight scale on hover */
+  animation: fadeInUp 1s ease-in-out;
+  transform: translateY(0);
+  transition: all 0.5s ease-in-out;
+  opacity: 1; /* Full opacity */
+}
+
+
+/* Keyframes for fadeInUp animation */
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Additional styling for better appearance */
+.text-pretty {
+  font-family: 'Merriweather', serif; /* Use a professional font */
+  background-color: rgba(255, 255, 255, 0.8); /* Subtle background color */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}

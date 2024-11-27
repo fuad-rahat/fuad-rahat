@@ -48,7 +48,7 @@ export default function Sidebar({ children }) {
           <img
             src="/formal.png"
             alt=""
-            className="w-11 h-11 rounded-full bg-green-400"
+            className="w-11 h-11 rounded-full bg-sky-700"
           />
           <div className={`flex justify-between items-center overflow-hidden transition-all ${expanded ? "w-52 ml-3" : "w-0"}`}>
             <div className="leading-4">
@@ -69,7 +69,7 @@ export function SidebarItem({ icon, text, active, alert }) {
   return (
     <li
       className={`relative flex items-center py-2 px-3 my-1 font-medium rounded-md cursor-pointer transition-colors group ${
-        active ? "bg-green-400 text-white" : "hover:bg-indigo-50 text-gray-600"
+        active ? "bg-sky-700 text-white" : "hover:bg-indigo-50 text-gray-600"
       }`}
     >
       {icon}
