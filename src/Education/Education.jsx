@@ -109,7 +109,7 @@ const Education = () => {
                 <div className="text-xl font-bold text-blue-400">{edu.degree}</div>
                 <div className="text-gray-700">{edu.institution}</div>
               </div>
-              <hr className="border-gray-300" />
+              <hr className="border-blue-700" />
             </li>
           ))}
         </ul>
