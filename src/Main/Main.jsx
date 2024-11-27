@@ -9,7 +9,6 @@ import { CgWebsite } from 'react-icons/cg';
 import { GrContact } from 'react-icons/gr';
 import { AuthContext } from '../Provider/AuthProvider';
 import { enqueueSnackbar } from 'notistack';
-import Particles from 'react-tsparticles';
 
 const Main = () => {
     const { user, googleSign, logout } = useContext(AuthContext);
@@ -31,59 +30,7 @@ const Main = () => {
 
     return (
         <div className='relative'>
-            {/* Particles Component */}
-            <Particles
-                id="tsparticles"
-                options={{
-                    fullScreen: { enable: true, zIndex: 0 }, // Ensure particles take full screen
-                    particles: {
-                        number: {
-                            value: 50, // number of particles
-                            density: {
-                                enable: true,
-                                value_area: 800,
-                            },
-                        },
-                        shape: {
-                            type: 'circle',
-                        },
-                        opacity: {
-                            value: 0.7, // particles are a bit more opaque
-                            random: true,
-                            animation: {
-                                enable: true,
-                                speed: 1,
-                                opacity_min: 0.1,
-                            },
-                        },
-                        size: {
-                            value: 3, // particle size
-                            random: true,
-                            animation: {
-                                enable: true,
-                                speed: 5,
-                                minimumValue: 1,
-                            },
-                        },
-                        move: {
-                            enable: true,
-                            speed: 1,
-                            direction: 'none',
-                            random: true,
-                            straight: false,
-                            outModes: {
-                                default: 'out',
-                            },
-                        },
-                        color: {
-                            value: '#FFD700', // golden color to simulate fireflies
-                        },
-                        link: {
-                            enable: false,
-                        },
-                    },
-                }}
-            />
+            
 
             <div className='fixed z-10'>
                 <Sidebar>

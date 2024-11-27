@@ -98,18 +98,20 @@ const Education = () => {
               degree: 'Secondary School Certificate (SSC)',
               institution: 'Trishal Govt. Nazrul Academy',
             }].map((edu, index) => (
-            <li key={index} ref={(el) => (elementsRef.current[index + skills.length] = el)} className="text-gray-700">
+            <li key={index} ref={(el) => (elementsRef.current[index + skills.length] = el)} className="text-red-700">
               <div className="timeline-middle">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-6 w-6 text-blue-400">
+                {/* Adjust the line color by changing the `path` element's fill */}
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-6 w-6 text-blue-500">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
                 </svg>
               </div>
-              <div className={`${index % 2 === 0 ? 'timeline-end' : 'timeline-start'} md:text-end mb-8`}>
+              <div className={`${index % 2 === 0 ? 'timeline-end' : 'timeline-start'} md:text-end mb-8 text-blue-500`}>
                 <time className="font-mono italic text-lg text-gray-600">{edu.year}</time>
-                <div className="text-xl font-bold text-blue-400">{edu.degree}</div>
+                <div className="text-xl font-bold">{edu.degree}</div>
                 <div className="text-gray-700">{edu.institution}</div>
               </div>
-              <hr className="border-blue-700" />
+              {/* Adjust the line color using the border color of the hr */}
+              <hr className="border-red-500" />
             </li>
           ))}
         </ul>
