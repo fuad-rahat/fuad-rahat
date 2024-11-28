@@ -50,7 +50,7 @@ const Contact = () => {
                 <p className="text-3xl lg:text-4xl font-semibold text-center mb-6">Contact ME</p>
                 <div className="lg:flex lg:gap-10 lg:justify-center items-center">
                     {/* Contact Info Section */}
-                    <div className="flex flex-col gap-3 mb-6 lg:mb-0 text-xl">
+                    <div className="flex flex-col gap-3 mb-6 lg:mb-0 text-lg">
                         <p className="flex gap-2 items-center"><i className="fa-solid fa-location-dot"></i> Trishal, Mymensingh, Bangladesh</p>
                         <p className="flex gap-2 items-center"><i className="fa-solid fa-envelope"></i> fuadrahat01@gmail.com</p>
                         <p className="flex gap-2 items-center"><i className="fa-solid fa-phone"></i> 01754677999</p>

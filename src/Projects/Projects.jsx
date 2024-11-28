@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import useProjects from '../Hooks/useProjects';
 import axios from 'axios';
 import 'animate.css'; // Ensure animate.css is installed
+import { Link } from 'react-router-dom';
 
 const Projects = () => {
     const [picture, setPicture] = useState();
@@ -84,7 +85,7 @@ const Projects = () => {
     // Custom styles for enhanced visuals
     const cardStyle = 'transform transition-all duration-700 shadow-xl rounded-3xl shadow-slate-700 w-full h-80 bg-blue-400 overflow-hidden hover:scale-110 hover:shadow-2xl hover:rotate-2 hover:cursor-pointer';
     const imageStyle = 'project-image rounded-t-3xl w-full h-2/3 object-cover transition-all duration-1000 ease-in-out transform hover:scale-125 hover:rotate-3 hover:object-top hover:shadow-2xl';
-    const titleStyle = 'text-white font-extrabold text-2xl mb-2 transition-all duration-300 ease-in-out transform hover:text-yellow-400 hover:scale-105 hover:underline';
+    const titleStyle = 'text-white font-extrabold text- mb-2 transition-all duration-300 ease-in-out transform hover:text-yellow-400 hover:scale-105 hover:underline';
     const tagStyle = 'bg-indigo-100 text-indigo-800 px-2 py-1 rounded-md text-xs font-medium transition-all duration-300 ease-in-out hover:bg-indigo-500 hover:text-white hover:scale-105';
 
     // Reverse the projects array without mutating the original one
@@ -95,10 +96,13 @@ const Projects = () => {
             <div className="md:max-w-[30rem] mx-auto">
                 <p className="text-4xl text-center text-sky-700 mb-8">My Projects</p>
             </div>
-            <div className="max-w-[17rem] md:max-w-[50rem] grid gap-12 mx-auto my-3 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 items-center justify-center min-h-screen w-full px-4">
+            <div  className="max-w-[17rem] md:max-w-[50rem] grid gap-12 mx-auto my-3 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 items-center justify-center min-h-screen w-full px-4">
                 {reversedProjects.map((project, index) => (
+                   <Link 
+                   key={project._id}
+                   to={project.url}>
                     <div
-                        key={project._id}
+                       
                         ref={(el) => (projectRefs.current[index] = el)}
                         className="transform transition-all duration-1000"
                     >
@@ -122,6 +126,8 @@ const Projects = () => {
                             </div>
                         </div>
                     </div>
+                   
+                   </Link>
                 ))}
             </div>
         </div>
