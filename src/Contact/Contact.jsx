@@ -47,7 +47,7 @@ const Contact = () => {
     return (
         <div className="max-w-[30rem] px-5 my-8 md:max-w-[80rem] mx-auto">
             <div className="bg-blue-200 border-2 border-sky-500 rounded-2xl p-5 md:p-10">
-                <p className="text-3xl lg:text-4xl font-semibold max-sm:text-black text-center mb-6">Contact ME</p>
+                <p className="text-3xl lg:text-4xl font-semibold max-sm:text-black text-center mb-6">Contact M</p>
                 <div className="lg:flex lg:gap-10 lg:justify-center items-center">
                     {/* Contact Info Section */}
                     <div className="flex flex-col gap-3 mb-6 lg:mb-0 text-lg">
