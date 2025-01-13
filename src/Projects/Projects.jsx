@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react'; 
 import useProjects from '../Hooks/useProjects';
 import axios from 'axios';
 import 'animate.css'; // Ensure animate.css is installed
@@ -10,9 +10,46 @@ const Projects = () => {
     const [title, setTitle] = useState('');
     const [webUrl, setWebUrl] = useState('');
     const [webTag, setWebTag] = useState('');
-
-    const [projects, refetch] = useProjects();
+    const [projects, setProjects] = useState([]); // Local state to hold projects data
     const projectRefs = useRef([]);
+
+    const staticProjects = [
+        {
+            "_id": "667bbac6cd2883b19821a923",
+            "title": "Group Assignment",
+            "url": "https://i.ibb.co/tDrk7jd/groupassignment11-5eaf0-web-app.png",
+            "webUrl": "https://groupassignment11-5eaf0.web.app/",
+            "webTag": "#react #mongodb #express #firebase #tailwind"
+        },
+        {
+            "_id": "667bbbeecd2883b19821a924",
+            "title": "Opinion Loom",
+            "url": "https://i.ibb.co/bsKPWzS/opinion-loom-web-app.png",
+            "webUrl": "https://opinion-loom.web.app/",
+            "webTag": "#react #mongodb #dotenv #hooks #express #firebase #tailwind"
+        },
+        {
+            "_id": "667bbd2fcd2883b19821a925",
+            "title": "Tech Brand",
+            "url": "https://i.ibb.co/F3P9CqY/techbrand-2f37c-web-app.png",
+            "webUrl": "https://techbrand-2f37c.web.app/",
+            "webTag": "#react #mongodb #express #firebase #tailwind"
+        },
+        {
+            "_id": "67471a13e79426676ab68fbb",
+            "title": "Archean",
+            "url": "https://i.ibb.co.com/685SH8K/Screenshot-2024-11-27-at-19-11-56-Archean…",
+            "webUrl": "https://archean24.netlify.app/",
+            "webTag": "#implement-gemini #chat-bot #nextJS #globe"
+        },
+        {
+            "_id": "67475e47e79426676ab68fbd",
+            "title": "Golden Vault",
+            "url": "https://i.ibb.co.com/5F1QFWY/Screenshot-2024-11-27-at-23-59-42-Golden-…",
+            "webUrl": "https://goldenvault.org/",
+            "webTag": "#nextjs #mongoose #oauth"
+        }
+    ];
 
     const projectAdder = async (e) => {
         e.preventDefault();
@@ -50,37 +87,26 @@ const Projects = () => {
                     setTitle('');
                     setWebUrl('');
                     setWebTag('');
-                    refetch();
                 })
                 .catch(err => {
                     console.error('Error saving image URL to database:', err);
                 });
         }
-    }, [uploadedUrl, refetch]);
+    }, [uploadedUrl]);
 
     useEffect(() => {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate__fadeInUp');
-                } else {
-                    entry.target.classList.remove('animate__fadeInUp');
-                }
-            });
-        }, {
-            threshold: 0.1
-        });
-
-        projectRefs.current.forEach(ref => {
-            if (ref) observer.observe(ref);
-        });
-
-        return () => {
-            projectRefs.current.forEach(ref => {
-                if (ref) observer.unobserve(ref);
-            });
+        const fetchProjects = async () => {
+            try {
+                const response = await axios.get('https://fuad-rahat-server.vercel.app/photos');
+                setProjects(response.data); // Set fetched projects
+            } catch (err) {
+                console.error('Error fetching projects:', err);
+                setProjects(staticProjects); // Use static data if API fails
+            }
         };
-    }, [projects]);
+
+        fetchProjects();
+    }, []);
 
     // Custom styles for enhanced visuals
     const cardStyle = 'transform transition-all duration-700 shadow-xl rounded-3xl shadow-slate-700 w-full h-80 bg-blue-400 overflow-hidden hover:scale-110 hover:shadow-2xl hover:rotate-2 hover:cursor-pointer';
@@ -96,38 +122,33 @@ const Projects = () => {
             <div className="md:max-w-[30rem] mx-auto">
                 <p className="text-4xl text-center text-sky-700 mb-8">My Projects</p>
             </div>
-            <div  className="max-w-[17rem] md:max-w-[50rem] grid gap-12 mx-auto my-3 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 items-center justify-center min-h-screen w-full px-4">
+            <div className="max-w-[17rem] md:max-w-[50rem] grid gap-12 mx-auto my-3 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 items-center justify-center min-h-screen w-full px-4">
                 {reversedProjects.map((project, index) => (
-                   <Link 
-                   key={project._id}
-                   to={project.url}>
-                    <div
-                       
-                        ref={(el) => (projectRefs.current[index] = el)}
-                        className="transform transition-all duration-1000"
-                    >
-                        <div className={`${cardStyle} animate__animated animate__fadeInUp`}>
-                            <a href={project?.webUrl} target="_blank" rel="noopener noreferrer">
-                                <img
-                                    className={`${imageStyle}`}
-                                    src={project.url}
-                                    alt="Project Image"
-                                />
-                            </a>
-                            <div className="p-3 mb-5">
-                                <p className={`${titleStyle}`}>{project?.title}</p>
-                                <div className="flex flex-wrap mb-2 gap-2">
-                                    {project?.webTag.split(' ').map((tag, idx) => (
-                                        <span key={idx} className={`${tagStyle}`}>
-                                            {tag}
-                                        </span>
-                                    ))}
+                    <Link 
+                        key={project._id}
+                        to={project.webUrl}>
+                        <div ref={(el) => (projectRefs.current[index] = el)} className="transform transition-all duration-1000">
+                            <div className={`${cardStyle} animate__animated animate__fadeInUp`}>
+                                <a href={project?.webUrl} target="_blank" rel="noopener noreferrer">
+                                    <img
+                                        className={`${imageStyle}`}
+                                        src={project.url}
+                                        alt="Project Image"
+                                    />
+                                </a>
+                                <div className="p-3 mb-5">
+                                    <p className={`${titleStyle}`}>{project?.title}</p>
+                                    <div className="flex flex-wrap mb-2 gap-2">
+                                        {project?.webTag.split(' ').map((tag, idx) => (
+                                            <span key={idx} className={`${tagStyle}`}>
+                                                {tag}
+                                            </span>
+                                        ))}
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                   
-                   </Link>
+                    </Link>
                 ))}
             </div>
         </div>
