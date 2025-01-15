@@ -38,14 +38,14 @@ const Projects = () => {
         {
             "_id": "67471a13e79426676ab68fbb",
             "title": "Archean",
-            "url": "https://i.ibb.co.com/685SH8K/Screenshot-2024-11-27-at-19-11-56-Archean…",
+            "url": "https://i.ibb.co.com/685SH8K/Screenshot-2024-11-27-at-19-11-56-Archean.png",
             "webUrl": "https://archean24.netlify.app/",
             "webTag": "#implement-gemini #chat-bot #nextJS #globe"
         },
         {
             "_id": "67475e47e79426676ab68fbd",
             "title": "Golden Vault",
-            "url": "https://i.ibb.co.com/5F1QFWY/Screenshot-2024-11-27-at-23-59-42-Golden-…",
+            "url": "https://i.ibb.co.com/5F1QFWY/Screenshot-2024-11-27-at-23-59-42-Golden-Vault.png",
             "webUrl": "https://goldenvault.org/",
             "webTag": "#nextjs #mongoose #oauth"
         }
