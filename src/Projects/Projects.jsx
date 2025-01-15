@@ -115,7 +115,7 @@ const Projects = () => {
     const tagStyle = 'bg-indigo-100 text-indigo-800 px-2 py-1 rounded-md text-xs font-medium transition-all duration-300 ease-in-out hover:bg-indigo-500 hover:text-white hover:scale-105';
 
     // Reverse the projects array without mutating the original one
-    const reversedProjects = [...projects].reverse();
+    const reversedProjects = [...staticProjects].reverse();
 
     return (
         <div className="py-12">
